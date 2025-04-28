@@ -54,7 +54,7 @@ const FilterSection = ({ id, products, filterProductsFn }) => {
         <div className="flex-1 relative">
           <div className="absolute z-10 top-0 w-full h-full">
             <div className="h-full overflow-x-auto ">
-              {allCategory.length > 0 ? (
+              {allCategory?.length > 0 ? (
                 <>
                   <div className="cursor-pointer py-2">
                     <Link href={`/`}>

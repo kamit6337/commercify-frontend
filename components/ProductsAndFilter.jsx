@@ -23,8 +23,6 @@ const ProductsAndFilter = ({
 
   useEffect(() => {
     if (isPagination && inView && !isFetchingNextPage && hasNextPage) {
-      console.log("fetch next page");
-
       fetchNextPage();
     }
   }, [inView, isFetchingNextPage, fetchNextPage, isPagination, hasNextPage]);
@@ -48,7 +46,7 @@ const ProductsAndFilter = ({
         </div>
 
         <main className="flex-1 bg-white">
-          {filterProducts.length > 0 ? (
+          {filterProducts?.length > 0 ? (
             <ProductGrid products={filterProducts} />
           ) : products.length > 0 ? (
             <div>

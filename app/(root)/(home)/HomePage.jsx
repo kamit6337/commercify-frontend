@@ -3,6 +3,7 @@
 import ProductsAndFilter from "@/components/ProductsAndFilter";
 import useAllProducts from "@/hooks/products/useAllProducts";
 import { hydrateFromLocalStorage } from "@/redux/slice/cartAndWishlistSlice";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
 const HomePage = () => {
