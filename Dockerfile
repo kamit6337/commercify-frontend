@@ -24,7 +24,7 @@ ENV NODE_ENV=production
 WORKDIR /app
 
 # Copy only the necessary files from the build stage
-COPY --from=builder /app/next.config.js /app/package.json /app/public ./ 
+COPY --from=builder /app/next.config.mjs /app/package.json /app/public ./ 
 COPY --from=builder /app/.next ./.next 
 COPY --from=builder /app/node_modules ./node_modules 
 
