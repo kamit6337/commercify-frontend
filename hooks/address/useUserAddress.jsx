@@ -1,5 +1,12 @@
+import { getReq } from "@/utils/api/api";
 import { useQuery } from "@tanstack/react-query";
-import { getReq } from "../../utils/api/api";
+
+export const prefetchUserAddress = () => {
+  return {
+    queryKey: ["user addresses"],
+    queryFn: () => getReq("/address"),
+  };
+};
 
 const useUserAddress = () => {
   const query = useQuery({

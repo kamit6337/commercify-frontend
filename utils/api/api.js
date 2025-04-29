@@ -1,5 +1,9 @@
 import axios from "axios";
 import getAuthToken from "./getAuthToken";
+import environment from "../environment";
+
+console.log("server url", environment.SERVER_URL);
+console.log("node env", environment.NODE_ENV);
 
 const BASE_URL = "https://commercify-server-f7yy.onrender.com";
 

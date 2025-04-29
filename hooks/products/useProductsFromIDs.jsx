@@ -1,12 +1,13 @@
+import { getReq } from "@/utils/api/api";
 import { useQueries } from "@tanstack/react-query";
-import { getReq } from "../../utils/api/api";
 
-const useProductsFromIDs = (ids: string[]) => {
+const useProductsFromIDs = (ids) => {
   const query = useQueries({
     queries: ids.map((id) => ({
       queryKey: ["Single Product", id],
       queryFn: () => getReq("/products", { id }),
       staleTime: Infinity,
+      enabled: !!id,
     })),
     combine: (results) => {
       return {

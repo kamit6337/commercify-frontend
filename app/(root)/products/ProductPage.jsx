@@ -1,5 +1,4 @@
 "use client";
-import ImagePart from "@/components/ImagePart";
 import useSingleProduct from "@/hooks/products/useSingleProduct";
 import { currencyState } from "@/redux/slice/currencySlice";
 import changePriceDiscountByExchangeRate from "@/utils/javascript/changePriceDiscountByExchangeRate";
@@ -7,6 +6,7 @@ import makeDateDaysAfter from "@/utils/javascript/makeDateDaysAfter";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import ImagePart from "./ImagePart";
 
 const ProductPage = ({ productId }) => {
   const { symbol, exchangeRate } = useSelector(currencyState);

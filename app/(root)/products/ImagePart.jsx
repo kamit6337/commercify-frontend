@@ -21,7 +21,7 @@ const ImagePart = ({ image, title, id }) => {
   }, [id, cart]);
 
   useEffect(() => {
-    if (wishlist.includes(id)) {
+    if (wishlist.find((obj) => obj.id === id)) {
       setIsAddedToWatchlist(true);
     } else {
       setIsAddedToWatchlist(false);

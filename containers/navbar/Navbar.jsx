@@ -12,6 +12,7 @@ import Toastify from "@/lib/Toastify";
 import CustomImages from "@/assets/images";
 import Image from "next/image";
 import UserCountry from "./UserCountry";
+import UserProfile from "./UserProfile";
 
 const Navbar = () => {
   const router = useRouter();
@@ -135,7 +136,7 @@ const Navbar = () => {
 
       {/* MARK: USER PROFILE */}
       <UserCountry />
-      {/* <UserProfile /> */}
+      <UserProfile />
 
       {/* MARK: CART */}
       <Link href={`/cart`}>

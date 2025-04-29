@@ -124,7 +124,7 @@ const UserCountry = () => {
           />
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-72">
+      <DropdownMenuContent className="w-72" align="end">
         {countries.map((country) => {
           const { id, name, flag } = country;
 
