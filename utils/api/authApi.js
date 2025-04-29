@@ -1,8 +1,7 @@
 import axios from "axios";
-import environment from "../environment";
 import getAuthToken from "./getAuthToken";
 
-const BASE_URL = environment.SERVER_URL + "/auth";
+const BASE_URL = "https://commercify-server-f7yy.onrender.com" + "/auth";
 
 export const getAuthReq = async (url, params) => {
   const token = getAuthToken() || "";
